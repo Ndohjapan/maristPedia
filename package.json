@@ -1,0 +1,15 @@
+{
+  "name": "clien",
+  "version": "1.0.0",
+  "description": "Client app for the Marist Pedia project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Promise Sheggsmann",
+  "license": "MIT",
+  "dependencies": {
+    "browser-image-compression": "^1.0.14",
+    "electron": "^11.2.2"
+  }
+}

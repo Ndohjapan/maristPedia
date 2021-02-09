@@ -1,0 +1,344 @@
+:root {
+    --primary-color: hsl(154, 59%, 51%);
+    --dark-color: rgb(17, 53, 30);
+}
+
+#screen3 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+}
+
+
+#screen3 .container div {
+    padding: 0;
+}
+
+#screen3 .container-content {
+    height: 100%;
+    width: 100%;
+    margin: none;
+    padding: 0px;
+}
+
+#screen3 .header {
+    background-color: #333;
+    z-index: 1000;
+    height: 7%;
+    width: 100%;
+    box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    padding: 2px;
+}
+
+.section-1 button {
+    width: 120px;
+    padding: 5px;
+    background-color: var(--primary-color);
+	border-radius: 5px;
+	border: 1px solid var(--primary-color);
+	box-shadow: 0 2px var(--primary-color);
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.section-1 #quit_quiz {
+    background-color: hsl(0, 100%, 74%);
+    border: 1px solid hsl(0, 100%, 74%);
+	box-shadow: 0 2px hsl(0, 100%, 74%);
+}
+
+#screen3 .body {
+    position: relative;
+    height: 84%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color :#fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color:hsl(154, 59%, 45%);
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+}
+
+button#prev {
+    position: absolute;
+    top: 50%;
+    left: 65px;
+}
+
+button#next {
+    position: absolute;
+    top: 50%;
+    right: 65px;
+} 
+
+.question-display {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.4)
+}
+
+.question-top {
+    background-color: var(--primary-color);
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    width: 60px;
+    height: 60px;
+    margin: 7px 20px;
+}
+
+.mins {
+    width: 13px;
+    height: 22px;
+}
+
+.secs {
+    width: 22px;
+    height: 22px;
+}
+
+.clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    height: 100%;
+    font-size: 17px;
+    margin-right: 30px;
+}
+
+.clock div {
+    color: #fff;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 10%;
+    left: -16%;
+    overflow: visible;
+}
+
+.progress-ring__circle {
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    /* stroke: rgb(51, 65, 255); */
+    stroke: #fff;
+}
+
+
+.danger {
+    animation: pulse 0.9s ease-in-out infinite;
+}
+    
+.done {
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: rotate(-90deg) scale(1);
+    }
+    50% {
+        transform: rotate(-90deg) scale(1.07);
+    }
+    75% {
+        transform: rotate(-90deg) scale(1);
+    }
+}
+
+.question-top h2 {
+    padding: 15px;
+}
+
+.question-top h2 span {
+    font-size: 16px;
+    color: rgb(223, 221, 221);
+}
+
+.question-body {
+    width: 100%;
+    height: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.question-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;    
+}
+
+.question {
+    text-align: center;
+    width: 100%;
+    color: #333;
+    margin-top: 10px;
+}
+
+.question h3 {
+    padding: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.question-slide {
+    height: 85%;
+    position: absolute;
+    box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out 0.3s;
+}
+
+.options button {
+    width: 300px;
+    height: 50px;
+    background-color: var(--dark-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: auto;
+}
+
+.question-footer {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-footer button {
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    color:hsl(154, 59%, 45%);
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid hsl(154, 59%, 51%);
+    width: 100px;
+}
+
+#screen3 .footer {
+    background-color: #333;
+    border-top: 1px solid #fff;
+    height: 8%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#screen3 .footer button {
+    width: 200px;
+    padding: 2px;
+    height: 30px;
+    background-color: hsl(154, 59%, 51%);
+	border-radius: 5px;
+	border: 1px solid var(--primary-color);
+	box-shadow: 0 2px var(--primary-color);
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* Modals */
+#exit_modal {
+    height: 150px;
+    width: 400px;
+}
+
+#exit_modal .body div {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#exit_modal .body button {
+    height: 40px;
+    width: 60px;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#quit_quiz_yes {
+    background-color: hsl(154, 59%, 45%);
+    color: white;
+    letter-spacing: 1.1px;
+}
+
+#quit_quiz_no {
+    color: #333;  
+}
+
+#exit_modal .body 
+
+#close_quit_modal {
+    color: #fff;
+}
+
+

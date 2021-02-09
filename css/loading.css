@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-color: #0195F7;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loadingIcon {
+    font-size: 60px;
+}

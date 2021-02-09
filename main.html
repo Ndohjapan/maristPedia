@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marist Pedia</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="font_awesome/css/all.css">
+    <link rel="stylesheet" href="./css/question.css">
+</head>
+<body>
+
+    <div class="screen-manager">
+
+        <div class="container" id="screen1">
+            <div class="header">
+                <h1>
+                    MARIST PEDIA
+                </h1>
+                <p>
+                    See how experienced students solve problems in real-time. Listening to
+                    teachers is great, but understanding how successful students think is
+                    invaluable.
+                </p>
+            </div>
+            <div class="content">
+                <div class="box box-blue">
+                    <p id="server">
+                        <strong>Client</strong>
+                    </p>
+                </div>
+    
+                <form class="box form-container" id="form">
+                    <div class="form-control">
+                        <input type="text" id="username" placeholder="Username" autofocus />
+                        <small></small>
+                    </div>
+                    <div class="form-control file-control">
+                        <input type="file" id="image-file" placeholder="" accept=".jpg,.png" required/>
+                        <span id="filename"></span>
+                        <small></small>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" id="class_name" placeholder="Class"/>
+                        <small></small>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" id="ip-address" placeholder="IP Address"/>
+                        <small></small>
+                    </div>
+    
+                    <button type="submit" id="submit" class="submit" >Connect</button>
+                    <small>
+                        By: Promise, Joel and Chris
+                        <a href="#">Terms and Services</a>
+                    </small>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- Second Screen -->
+        <div class="container" id="screen2">
+            <div class="screen2-container">
+                <div class="aside">
+                    <div class="aside-content">
+                        <button id="home-btn" class="disconnect-btn"><i class="fa fa-home" aria-hidden="true"></i></button>
+                        <div class="header">
+                            <h2>MARIST PEDIA</h2>
+                            <p>Wait Till The Server Starts The Quiz
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="user-profile">
+                    <div class="picture">
+                        <img id="profile" src="./assets/profile.png" alt="Profile Picture">
+                    </div>
+                    <div class="user-profile-content">
+                        <div class="user-info-wrapper">
+                            <div class="user-info">
+                                <p>Name: <span id="client_name"></span></p>
+                            </div>
+                            <div class="user-info">
+                                <p>Class: <span id="client_class"></span></p>
+                            </div>
+                        </div>
+                        <button class="disconnect-btn"><i class="fa fa-back"></i> Disconnect</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Question Screen -->
+
+        <div class="container" id="screen3">
+            <div class="container-content">
+                <div class="header">
+                    <h3>Marist Pedia</h3>
+
+                    <div class="section-1">
+                        <button id="start-timer-btn">Start <i class="fas fa-clock"></i></button>
+                        <button id="quit_quiz">Quit Quiz</button>
+                    </div>
+                </div>
+
+                <div class="body">
+                    <div class="question-content">
+                        <!-- Slider -->
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <div class="advert">
+                        <p>
+                            <i class="fa fa-copyright" aria-hidden="true"></i>
+                            2020 Lead City Boys
+                        </p>
+                    </div>
+                    <div class="command-section">
+                        <button>Display Results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Toast Modal -->
+        <div class="modal">
+            <div class="content" id="toast">
+                <h3>Promise Sheggsmann</h3>
+                <p>Connected...</p>
+            </div>
+        </div>
+
+        <!-- Connecting modal -->
+        <div class="modal" id="connecting">
+            <div class="content" id="connecting-delay">
+                <h3>Connecting</h3>
+                <i id="loadingIcon" class="fas fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+
+        <!-- Invalid IP -->
+        <div class="modal" id="invalidIP">
+            <div class="content" id="invalidIP-display">
+                <h3 style="font-weight: bolder; font-size: x-large;">Invalid IP Format</h3>
+
+                <br>
+
+                <div class="ipFormat">IP Format: <span>192.168.56.42</span></div>
+            </div>
+        </div>
+
+        <!-- Disconnecting Modal -->
+        <div class="modal" id="disconnecting">
+            <div class="content" id="disconnecting-delay">
+                <h3>Disconnecting</h3>
+                <i id="loadingIcon" class="fas fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/controller.js"></script>
+    <script src="./js/client.js"></script>
+
+</body>
+</html>
